@@ -22,8 +22,17 @@ export default function MainSection() {
       {/* Top Nav */}
       <div className="absolute top-16 left-0 right-0 px-2 sm:px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between z-10 gap-3 sm:gap-4">
         {/* Nav Buttons */}
+        {/* Nav Buttons */}
         <div className="flex flex-row gap-2 sm:gap-4 border border-brand-orange text-xs sm:text-sm md:text-base font-semibold rounded-full px-2 py-1">
-          <button className="px-3 sm:px-4 py-1 rounded-full hover:bg-brand-orange hover:text-white transition duration-300">
+          <button
+            onClick={() => {
+              const productSection = document.getElementById('products');
+              if (productSection) {
+                productSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="px-3 sm:px-4 py-1 rounded-full hover:bg-brand-orange hover:text-white transition duration-300"
+          >
             SHOP
           </button>
           <button className="px-3 sm:px-4 py-1 rounded-full hover:bg-brand-orange hover:text-white transition duration-300">
@@ -33,6 +42,7 @@ export default function MainSection() {
             LEARN
           </button>
         </div>
+
 
         {/* Logo */}
         <div className="flex justify-center w-full sm:w-auto my-2 sm:my-0">

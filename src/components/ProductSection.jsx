@@ -16,7 +16,7 @@ export default function ProductSection() {
         });
       };
   return (
-     <section className="px-6 py-12 font-montserrat">
+     <section className="px-6 py-12 font-montserrat" id="products">
         <div className='flex justify-between items-center'>
           <h2 className="text-6xl font-bold text-brand-orange mb-8">BEST IN PLUMP</h2>
           <button
